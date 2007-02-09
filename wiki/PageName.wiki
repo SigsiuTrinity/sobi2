@@ -1,0 +1,133 @@
+Detailled Description
+
+SOBI 2 is not based on SOBI 1, but it is build up new from the bottom. This was necessary because the table structure of SOBI 1 was not suited for the features "sub-categories", "one entry in multi-categories" and "user definable fields". SOBI 2 uses a relational database structure. The table layout was designed graphically using the Clay Database Modelling UI.
+SOBI 2 is build up almost object oriented, but still runs under PHP4 and MySQL3.
+Frontend and backend are more separated. For example there are two separate language files. This simplifies changing only the frontend texts.
+
+Unfortunately, with this SOBI 2 isn't compatible to SOBI 1.
+We have realized a lot of the whishes. Some of them are not yet ready in the first release of SOBI 2, such as the promotion feature. We havn't seized all ideas because we have the opinion, that some of them go beyond the scope of this component. Indeed, SOBI 2 isn't longer only a business index, but also a directory component for almost everything, but we had to come to a compromise between possible features and complexity of the configuration.
+
+Category function
+
+    * Multi-Level Categories. That is, each sub-category may have sub-categories. Unlimited nesting depth.
+    * One entry can be entered in up to five categories.
+    * Fee required for categories is adjustable, with price scaling.
+    * Entries can be entered optional only in lowest or all categories.
+
+
+Entries
+
+    * Adding an image/logo, which will be shown in the cards view and/or in the details view.
+    * Adding an icon/symbol, which will be shown in the upper right corner of the cards view and/or in the details view.
+    * Meta-Keywords and Meta-Description can be set up by the user.
+    * Entries can be published immediately or not before an administrator has checked them.
+    * Within the backend it is selectable which fields are obligatory.
+    * Standard fields can be switched off and own fields can be defined (Custom Fields).
+
+
+Frontend-View
+
+Just as SOBI 1, SOBI 2 is divided into three views: the general view, the category view/card view and the details view.
+The views are almost entirely configurable within the backend.
+
+    * In the general view all main categories can be shown together with an image and a short description.
+    * Already in the general view all entries can be shown as cards.
+    * The category views show the corresponding sub categories too.
+    * The sorting order of the categories is adjustable within the backend.
+    * The sorting order of the fields is also adjustable (e.g. to change postal code and city for foreign countries).
+    * For each entry two images can be added. One small picture (icon/symbol), which will be already shown in the cards view and the logo image, which will be shown only in the details view.
+    * The sorting order of the entries is adjustable in the backend.
+    * Template for Details View to design the appearance individually.
+    * CSS file for easy layout changing.
+    * Connection to Google Maps possible.
+    * Details View can be configured to be shown only to registered users.
+
+
+User Edit Function
+
+    * Edit and delete functions for the user.
+      If a user is logged in, he can edit and delete his own entries Also he is able to switch his entry to another category. This functionality ca be switched off within the backend.
+    * The user is able to add his entry afterwards to additional categories.
+    * If the user selects additional options which requires fees while editing his entry, these fees will be charged again.
+    * It is adjustable within the backend, if the delete function really deletes an entry or sets it only to unpublish.
+
+
+Fee Requirement and Payment
+
+    * All fields (besides the title field) can be set for free or not.
+    * Base fee for whole entry.
+    * Adding an entry in more than one category can be set for free or not.
+    * Currency unit and currency separator are adjustable.
+    * Summary of the prices of all selected options at the end of adding an entry.
+    * Payment via Paypal and/or bank account info.
+    * Confirmation email for paid entries.
+
+
+Email Processing
+
+    * Optional sending of different emails to the user/author depending on the action (on add entry, on change entry, on approve by administrators).
+    * Sending an email with payment terms to the user/author and optional to the administrators.
+    * Optional sending of different emails to the administrators depending on the action (on add entry, on change entry).
+    * Defining email texts via templates within the backend.
+    * Individualized emails using placeholders.
+    * Separate emails for all installed SOBI2 languages.
+
+
+Search
+
+    * Extended search function using one single searching field.
+    * Drop Down Lists with all already entered values for all fields possible.
+    * Even user defined fileds with separate drop down list.
+    * Searchbot (Plugin) for Standard Joomla!/Mambo search function.
+
+
+Backend
+
+The backend layout of SOBI 2 is divided into two areas, which can be chosen using the left-sided menu. One area is the configuration menu, the other area is the "Category and Entry Manager".
+
+Configuration Menu:
+
+    * Field Manager, which can be used for the following functions:
+          o Three different field types: textfield, textarea and checkbox
+          o Adjusting the length and type of a field: inputbox or textarea, textarea w/o Wysiwig.
+          o Field Content as standardtext or URL, Email address or linked image
+          o Setting up fields in that manner, that they are only shown in the add/edit function but not visible for the visitors. This is for example for statistic functions or for a contact form (feature will be realized later)
+          o Setting up which fields are obligatory.
+          o Adjusting the sorting order of the fields (e.g. to change postal code and city for foreign countries).
+          o Adjusting, in which view a field should be shown (cards view and/or details view)
+    * The language is selectable (independant of the language setting of Joomla!)
+    * The background and the border color for the cards is selectable.
+    * Entries may have expiration date.
+    * IP addresses of set up and changing will be saved.
+    * Select if user may choose its background for every entry.
+
+
+Category and Entry Manager:
+Selection of catagory being edited is done via a tree view of all catagories. The Manager shows all sub categories and entries of the selected category. If an entry is being edited, it will be checked out. The following can be done using the Manager:
+
+    * Separate listing of all entries
+    * Copying and moving categories and entries
+    * Adding new categories and entries
+    * Editing categories and entries
+    * Deleting categories and entries
+    * Removing all or single entries from one category
+    * Changing the order of categories and entries
+    * Setting categories and entries to publish/unpublish
+    * Setting entries to approve/unapprove (verification)
+
+
+Possibility to uninstall the SOBI2 tables from the database. Uninstallation of the component (without tables) will be done using the standard Joomla!/Mambo uninstaller.
+Version checker to check for the newest SOBI2 version.
+
+Modules
+
+    * Module showing all categories in tree view or all main categories in flat view.
+    * Module showing the lastest entries.
+
+
+Plugins available
+
+    * SOBI Gallery - a plugin to show an "unlimited" number of uploaded images in details view (horizontally or vertically) with Lightbox effect.
+    * SOBI Review & Rating - a plugin to vote and comment an entry.
+
+  
